@@ -13,7 +13,6 @@ instance in the module ``myproj``.  You can also specify an explicit
 name using the fully qualified form::
     $ celery -A myapp:app worker -l info
 """
-from __future__ import absolute_import, unicode_literals
 
 import requests
 from celery import Celery
@@ -106,7 +105,7 @@ from celery.schedules import schedule
 class my_schedule(schedule):
 
     def is_due(self, last_run_at):
-        return …
+        return ""
 
 
 if __name__ == '__main__':
